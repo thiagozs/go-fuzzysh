@@ -62,3 +62,19 @@ func (f *Searcher) Search(term string) []Result {
 
 	return rr
 }
+
+func (f *Searcher) SearchWithTerms(terms []string, term string) []Result {
+	rr := []Result{}
+	result := fzf.SortStrings(terms, term)
+
+	for _, r := range result {
+		rr = append(rr, Result{
+			Match:   r.Match,
+			Query:   r.Query,
+			Score:   r.Score,
+			SortKey: r.SortKey,
+		})
+	}
+
+	return rr
+}
