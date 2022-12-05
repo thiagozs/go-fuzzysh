@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	fuzzy "github.com/thiagozs/go-fuzzysh"
 )
 
 func main() {
