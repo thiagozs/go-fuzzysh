@@ -1,10 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
-	fz, err := fuzzy.NewSearcher()
+	fz, err := fuzzy.NewSearcher(nil)
 	if err != nil {
 		panic(err)
 	}
