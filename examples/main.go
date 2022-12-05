@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	fuzzy "github.com/thiagozs/go-fuzzysh"
+	"github.com/thiagozs/go-fuzzysh"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 	res := fz.Search(fz.GetTerm())
 
 	for _, r := range res {
-		fmt.Println(r)
+		fmt.Printf("%+v\n", r)
 	}
 
 }

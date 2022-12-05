@@ -16,7 +16,7 @@ type Searcher struct {
 	term  string
 }
 
-func NewSearcher(opts []SlackrOptions) (*Searcher, error) {
+func NewSearcher(opts []FuzzyshOptions) (*Searcher, error) {
 
 	c := &OptionsParams{}
 	for _, opt := range opts {
